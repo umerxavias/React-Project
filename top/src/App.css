@@ -1,0 +1,427 @@
+
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background:#000;
+  color:#fff;
+  line-height:1.4;
+}
+
+/* Allow Bootstrap container text to inherit white if needed */
+.text-white { color:#fff !important; }
+
+/* ===== YOUR ORIGINAL STYLES (from style.css) ===== */
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 100px;
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+  width: 150px;
+}
+
+/* List styles */
+.list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navbtn {
+  padding: 12px 16.5px;
+  font-size: 14px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.navactive {
+  background-color: red;
+  color: white;
+}
+
+.hamburger {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 784px) {
+  .hamburger {
+    display: block;
+    color: white !important;
+  }
+
+  .list {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .list.show {
+    display: flex;
+  }
+
+  .list li {
+    margin: 10px 0;
+  }
+
+  .navbtn,
+  .navactive {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* navbar end */
+
+/* brand cards start */
+.container-fluid {
+  padding: 80px 100px 10px 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  padding: 60px 20px 40px 20px;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+}
+
+.brand-image {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  object-fit: contain;
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.brnd-img {
+  padding: 10px !important;
+}
+
+.brndbtn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+}
+
+/* brand cards end */
+
+/* location start */
+.franchise-section {
+  padding: 50px 100px;
+  background-color: #0d0d0d !important;
+  color: white;
+}
+
+.franchise-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.logo-text {
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center !important;
+}
+
+.franchise-header h2 {
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.franchise-header p {
+  color: #bbb;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.franchise-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.franchise-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.city {
+  color: #d32f2f;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.franchise-info h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.detail {
+  font-size: 16px;
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.direction-btn {
+  margin-top: 30px;
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.direction-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.arrow {
+  background-color: #d32f2f;
+  color: white;
+  margin-left: 15px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.franchise-image img {
+  width: 450px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .franchise-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .franchise-image img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .franchise-info {
+    align-items: center;
+  }
+
+  .direction-btn {
+    justify-content: center;
+  }
+}
+
+.franchise-express {
+  background-color: black !important;
+}
+
+.express-btn > button {
+  margin-bottom: 100px;
+}
+
+.card {
+  padding: 0px 12px;
+  background-color: #0d0d0d !important;
+  text-align: center !important;
+}
+
+.card-body > h1 {
+  font-size: 24px;
+}
+
+.card-title {
+  color: #d32f2f;
+}
+
+/* footer start */
+.footer {
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 100px;
+  font-size: 18px;
+  gap: 40px;
+}
+
+.ft-logo,
+.site-links,
+.contact,
+.follow {
+  flex: 1 1 200px;
+}
+
+.ft-logo img {
+  padding-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.ft-logo p {
+  color: rgb(162, 162, 162);
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: rgb(162, 162, 162);
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-links h4,
+.contact h4,
+.follow h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.site-links a {
+  display: block;
+  color: rgb(162, 162, 162);
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.site-links a:hover {
+  text-decoration: underline;
+}
+
+.contact p,
+.contact a {
+  color: rgb(162, 162, 162);
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.follow .social-icons {
+  margin-bottom: 20px;
+}
+
+.follow i {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.follow .app-links img {
+  margin: 10px 5px 0 0;
+  width: 120px;
+}
+
+/* Footer Bottom */
+.sec-footer {
+  background-color: black;
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 50px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .sec-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+/* footer end */
